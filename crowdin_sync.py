@@ -230,7 +230,6 @@ def download_crowdin(base_path, branch, xml, username, config,
         files = ['%s/crowdin/%s' % (_DIR, config)]
     else:
         files = ['%s/crowdin/crowdin_%s.yaml' % (_DIR, branch),
-                 '%s/crowdin/crowdin_%s_aosp.yaml' % (_DIR, branch)
                 ]
     for c in files:
         cmd = ['crowdin-cli', '--config=%s' % c, 'list', 'sources']
@@ -319,7 +318,6 @@ def main():
         files = ['%s/crowdin/%s' % (_DIR, args.config)]
     else:
         files = ['%s/crowdin/crowdin_%s.yaml' % (_DIR, default_branch),
-                 '%s/crowdin/crowdin_%s_aosp.yaml' % (_DIR, default_branch)
                  ]
     if not check_files(files):
         sys.exit(1)
