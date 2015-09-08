@@ -16,9 +16,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-api_key_env: CM_CROWDIN_API_KEY
-base_path_env: CM_CROWDIN_BASE_PATH
-project_identifier: cyanogenmod
+api_key_env: EXODUS_CROWDIN_API_KEY
+base_path_env: EXODUS_CROWDIN_BASE_PATH
+project_identifier: exodus
 preserve_hierarchy: true
 
 files:

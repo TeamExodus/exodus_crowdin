@@ -3,10 +3,10 @@
 # crowdin_sync.py
 #
 # Updates Crowdin source translations and pushes translations
-# directly to CyanogenMod's Gerrit.
+# directly to Exodus Gerrit.
 #
 # Copyright (C) 2014-2015 The CyanogenMod Project
-#
+# 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -82,7 +82,7 @@ def push_as_commit(base_path, path, name, branch, username):
 
     # Push commit
     try:
-        repo.git.push('ssh://%s@review.cyanogenmod.org:29418/%s' % (username, name),
+        repo.git.push('ssh://%s@exodus-developers.net:8000/%s' % (username, name),
                       'HEAD:refs/for/%s%%topic=translation' % branch)
         print('Successfully pushed commit for %s' % name)
     except:
@@ -108,17 +108,17 @@ def find_xml(base_path):
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Synchronising CyanogenMod's translations with Crowdin")
+        description="Synchronising Exodus translations with Crowdin")
     sync = parser.add_mutually_exclusive_group()
     parser.add_argument('-u', '--username', help='Gerrit username',
                         required=True)
-    parser.add_argument('-b', '--branch', help='CyanogenMod branch',
+    parser.add_argument('-b', '--branch', help='Exodus branch',
                         required=True)
     parser.add_argument('-c', '--config', help='Custom yaml config')
     sync.add_argument('--no-upload', action='store_true',
-                      help='Only download CM translations from Crowdin')
+                      help='Only download Exodus translations from Crowdin')
     sync.add_argument('--no-download', action='store_true',
-                      help='Only upload CM source translations to Crowdin')
+                      help='Only upload Exodus source translations to Crowdin')
     return parser.parse_args()
 
 # ################################# PREPARE ################################## #
@@ -291,15 +291,15 @@ def main():
     args = parse_args()
     default_branch = args.branch
 
-    base_path = os.getenv('CM_CROWDIN_BASE_PATH')
+    base_path = os.getenv('EXODUS_CROWDIN_BASE_PATH')
     if base_path is None:
         cwd = os.getcwd()
-        print('You have not set CM_CROWDIN_BASE_PATH. Defaulting to %s' % cwd)
+        print('You have not set EXODUS_CROWDIN_BASE_PATH. Defaulting to %s' % cwd)
         base_path = cwd
     else:
         base_path = os.path.join(os.path.realpath(base_path), default_branch)
     if not os.path.isdir(base_path):
-        print('CM_CROWDIN_BASE_PATH + branch is not a real directory: %s'
+        print('EXODUS_CROWDIN_BASE_PATH + branch is not a real directory: %s'
               % base_path)
         sys.exit(1)
 
