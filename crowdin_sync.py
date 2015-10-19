@@ -75,7 +75,7 @@ def push_as_commit(base_path, path, name, branch, username):
 
     # Create commit; if it fails, probably empty so skipping
     try:
-        repo.git.commit(m='Automatic translation import')
+        repo.git.commit(m='Import newest Exodus translations from Crowdin')
     except:
         print('Failed to create commit for %s, probably empty: skipping'
               % name, file=sys.stderr)
