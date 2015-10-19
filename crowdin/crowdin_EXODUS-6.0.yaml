@@ -1,4 +1,4 @@
-# crowdin_exodus-5.1.yaml
+# crowdin_EXODUS-5.1.yaml
 #
 # Crowdin configuration file for Exodus
 #
@@ -15,15 +15,14 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-api_key_env: EXODUS_CROWDIN_API_KEY
+api_key_env: CM_CROWDIN_API_KEY
 base_path_env: EXODUS_CROWDIN_BASE_PATH
 project_identifier: exodus
 preserve_hierarchy: true
 
 files:
-
-    languages_mapping: &anchor
+-
+      languages_mapping: &anchor
       android_code:
         af: af
         am: am
@@ -116,22 +115,3 @@ files:
     source:      '/exodus-5.1/frameworks_base/packages/SystemUI/res/values/exodus-strings.xml.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
-
-# Packages
-
-  # Settings
-#  -
- #   source:      '/cm-12.1/packages/apps/Settings/res/values/cm_plurals.xml'
-  #  translation: '/%original_path%-%android_code%/%original_file_name%'
-   # languages_mapping: *anchor
- # -
-  #  source:      '/cm-12.1/packages/apps/Settings/res/values/cm_strings.xml'
-   # translation: '/%original_path%-%android_code%/%original_file_name%'
-   # languages_mapping: *anchor
-
-  # SetupWizard
- # -
-  #  source:      '/cm-12.1/packages/apps/SetupWizard/res/values/strings.xml'
-   # translation: '/%original_path%-%android_code%/%original_file_name%'
-    #languages_mapping: *anchor
-
