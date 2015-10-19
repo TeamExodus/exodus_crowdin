@@ -173,11 +173,6 @@ def upload_crowdin(branch, config, no_upload=False):
                    '--config=%s/crowdin/crowdin_%s.yaml' % (_DIR, branch),
                    'upload', 'sources'])
 
-        print('\nUploading Crowdin source translations '
-              '(non-AOSP supported languages)')
-        check_run(['crowdin-cli',
-                   '--config=%s/crowdin/crowdin_%s_aosp.yaml' % (_DIR, branch),
-                   'upload', 'sources'])
 
 
 def download_crowdin(base_path, branch, xml, username, config,
@@ -195,12 +190,6 @@ def download_crowdin(base_path, branch, xml, username, config,
         print('\nDownloading Crowdin translations (AOSP supported languages)')
         check_run(['crowdin-cli',
                    '--config=%s/crowdin/crowdin_%s.yaml' % (_DIR, branch),
-                   'download', '--ignore-match'])
-
-        print('\nDownloading Crowdin translations '
-              '(non-AOSP supported languages)')
-        check_run(['crowdin-cli',
-                   '--config=%s/crowdin/crowdin_%s_aosp.yaml' % (_DIR, branch),
                    'download', '--ignore-match'])
 
     print('\nRemoving useless empty translation files')
