@@ -1,6 +1,6 @@
 # crowdin_EXODUS-6.0.yaml
 #
-# Crowdin configuration file for CyanogenMod
+# Crowdin configuration file for Exodus
 #
 # Copyright (C) 2014-2015 The CyanogenMod Project
 # Copyright (C) 2015 Alex Naidis <alex.naidis@linux.com> , on behalf of Team Exodus 
@@ -19,7 +19,7 @@
 
 api_key_env: EXODUS_CROWDIN_API_KEY
 base_path_env: EXODUS_CROWDIN_BASE_PATH
-project_identifier: exodus
+project_identifier: exodus-android
 preserve_hierarchy: true
 
 files:
