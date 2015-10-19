@@ -142,11 +142,11 @@ files:
 
   # Settings
   -
-    source:      '/EXODUS-6.0/packages_Settings/res/values/cm_plurals.xml'
+    source:      '/EXODUS-6.0/packages_Settings/res/values/exodus_plurals.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
   -
-    source:      '/EXODUS-6.0/packages_Settings/res/values/cm_strings.xml'
+    source:      '/EXODUS-6.0/packages_Settings/res/values/exodus_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
 
