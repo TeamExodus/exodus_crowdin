@@ -1,8 +1,9 @@
-# crowdin_EXODUS-5.1.yaml
+# crowdin_EXODUS-6.0.yaml
 #
-# Crowdin configuration file for Exodus
+# Crowdin configuration file for CyanogenMod
 #
 # Copyright (C) 2014-2015 The CyanogenMod Project
+# Copyright (C) 2015 Alex Naidis <alex.naidis@linux.com> , on behalf of Team Exodus 
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,14 +16,20 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-api_key_env: CM_CROWDIN_API_KEY
+
+api_key_env: EXODUS_CROWDIN_API_KEY
 base_path_env: EXODUS_CROWDIN_BASE_PATH
 project_identifier: exodus
 preserve_hierarchy: true
 
 files:
--
-      languages_mapping: &anchor
+# Frameworks
+
+  # framework-res
+  -
+    source:      '/EXODUS-6.0/frameworks_base/core/res/res/values/exodus_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: &anchor
       android_code:
         af: af
         am: am
@@ -41,6 +48,7 @@ files:
         en-AU: en-rAU
         en-GB: en-rGB
         en-IN: en-rIN
+        en-PT: en-rPT
         eo: eo
         es-ES: es
         es-US: es-rUS
@@ -52,6 +60,7 @@ files:
         fr-CA: fr-rCA
         fy-NL: fy-rNL
         gl: gl-rES
+        gu-IN: gu-rIN
         he: iw
         hi: hi
         hr: hr
@@ -91,6 +100,7 @@ files:
         si-LK: si-rLK
         sk: sk
         sl: sl
+        sq: sq-rAL
         sr: sr
         sv-SE: sv
         sw: sw
@@ -112,6 +122,29 @@ files:
 
   # SystemUI
   -
-    source:      '/exodus-5.1/frameworks_base/packages/SystemUI/res/values/exodus-strings.xml.xml'
+    source:      '/EXODUS-6.0/frameworks_base/packages/SystemUI/res/values/exodus_arrays.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
     languages_mapping: *anchor
+  -
+    source:      '/EXODUS-6.0/frameworks_base/packages/SystemUI/res/values/exodus_strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
+
+# Packages
+
+  # CellBroadcastReceiver
+ # -
+  #  source:      '/cm-12.1/packages/apps/CellBroadcastReceiver/res/values/cm_strings.xml'
+   # translation: '/%original_path%-%android_code%/%original_file_name%'
+   # languages_mapping: *anchor
+
+  # Exodus Updater
+ # -
+  #  source:      '/cm-12.1/packages/apps/CMUpdater/res/values/plurals.xml'
+   # translation: '/%original_path%-%android_code%/%original_file_name%'
+   # languages_mapping: *anchor
+  # -
+   # source:      '/cm-12.1/packages/apps/CMUpdater/res/values/strings.xml'
+   # translation: '/%original_path%-%android_code%/%original_file_name%'
+   # languages_mapping: *anchor
+
