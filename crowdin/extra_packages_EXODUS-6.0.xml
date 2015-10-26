@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote name="team-exodus"
+          fetch="https://github.com/TeamExodus"
+          review="exodus-developers.net:8000"
+          revision="EXODUS-6.0" />
 
+  <remote name="private"
+          fetch="ssh://git@github.com"
+          review="exodus-developers.net:8000"
+          revision="EXODUS-6.0" />
+
+<project path="frameworks_base" name="private_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="private" />
+  <project path="packages_Settings" name="TeamExodus/private_packages_apps_Settings" groups="pdk-fs" remote="private" />
 </manifest>
