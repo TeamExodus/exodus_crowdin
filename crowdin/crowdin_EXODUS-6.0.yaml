@@ -3,7 +3,7 @@
 # Crowdin configuration file for Exodus
 #
 # Copyright (C) 2014-2015 The CyanogenMod Project
-# Copyright (C) 2015 Alex Naidis <alex.naidis@linux.com> , on behalf of Team Exodus 
+# Copyright (C) 2015-2016 Alex Naidis <alex.naidis@linux.com> , on behalf of Team Exodus 
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -141,10 +141,10 @@ files:
 
 
   # Settings
-  -
-    source:      '/EXODUS-6.0/packages_Settings/res/values/exodus_plurals.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
+ # -
+  #  source:      '/EXODUS-6.0/packages_Settings/res/values/exodus_plurals.xml'
+   # translation: '/%original_path%-%android_code%/%original_file_name%'
+   # languages_mapping: *anchor
   -
     source:      '/EXODUS-6.0/packages_Settings/res/values/exodus_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'
