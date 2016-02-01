@@ -121,10 +121,10 @@ files:
 
 
   # SystemUI
-  -
-    source:      '/EXODUS-6.0/frameworks_base/packages/SystemUI/res/values/exodus_arrays.xml'
-    translation: '/%original_path%-%android_code%/%original_file_name%'
-    languages_mapping: *anchor
+ # -
+  #  source:      '/EXODUS-6.0/frameworks_base/packages/SystemUI/res/values/exodus_arrays.xml'
+  #  translation: '/%original_path%-%android_code%/%original_file_name%'
+  #  languages_mapping: *anchor
   -
     source:      '/EXODUS-6.0/frameworks_base/packages/SystemUI/res/values/exodus_strings.xml'
     translation: '/%original_path%-%android_code%/%original_file_name%'

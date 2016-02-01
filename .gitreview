@@ -1,0 +1,5 @@
+[gerrit]
+host=exodus-developers.net
+port=29418
+project=exodus_crowdin
+defaultbranch=master
