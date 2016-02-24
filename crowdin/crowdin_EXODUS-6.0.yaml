@@ -157,10 +157,10 @@ files:
 
 
   # Exodus Updater
- # -
-  #  source:      '/cm-12.1/packages/apps/CMUpdater/res/values/plurals.xml'
-   # translation: '/%original_path%-%android_code%/%original_file_name%'
-   # languages_mapping: *anchor
+  -
+    source:      '/EXODUS-6.0/UPDATER/app/src/main/res/values/strings.xml'
+    translation: '/%original_path%-%android_code%/%original_file_name%'
+    languages_mapping: *anchor
   # -
    # source:      '/cm-12.1/packages/apps/CMUpdater/res/values/strings.xml'
    # translation: '/%original_path%-%android_code%/%original_file_name%'
